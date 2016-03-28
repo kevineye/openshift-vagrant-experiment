@@ -1,6 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.network "public_network", type: "dhcp", bridge: "en0: Wi-Fi (AirPort)", adapter: 1
-  config.vm.network "forwarded_port", guest: 22, host: 2222, adapter: 1
+  config.vm.network "public_network", type: "dhcp", bridge: "en0: Wi-Fi (AirPort)"
   config.vm.box = "centos/7"
   config.vm.provider "virtualbox" do |v|
     v.memory = 4096

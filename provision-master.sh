@@ -22,4 +22,4 @@ sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub node1.lan
 ssh-keyscan node2.lan >> ~/.ssh/known_hosts
 sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub node2.lan
 
-ansible-playbook /home/vagrant/openshift-ansible/playbooks/byo/config.yml
+# ansible-playbook /home/vagrant/openshift-ansible/playbooks/byo/config.yml
