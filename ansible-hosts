@@ -1,0 +1,21 @@
+[OSEv3:children]
+masters
+nodes
+
+[masters]
+master.lan
+#master.lan openshift_hostname=master.lan openshift_ip=192.168.1.128 openshift_public_ip=192.168.1.128
+
+[OSEv3:vars]
+deployment_type=origin
+#openshift_master_cluster_hostname=master.lan
+openshift_master_cluster_public_hostname=openshift.kevin-eye.com
+openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
+osm_default_subdomain=apps.kevin-eye.com
+ansible_ssh_user=vagrant
+ansible_sudo=true
+
+[nodes]
+master.lan openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=false
+node1.lan openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
+node2.lan openshift_node_labels="{'region': 'primary', 'zone': 'west'}"
