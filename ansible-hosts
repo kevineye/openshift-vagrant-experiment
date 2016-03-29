@@ -4,11 +4,9 @@ nodes
 
 [masters]
 master.lan
-#master.lan openshift_hostname=master.lan openshift_ip=192.168.1.128 openshift_public_ip=192.168.1.128
 
 [OSEv3:vars]
 deployment_type=origin
-#openshift_master_cluster_hostname=master.lan
 openshift_master_cluster_public_hostname=openshift.kevin-eye.com
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 osm_default_subdomain=apps.kevin-eye.com
