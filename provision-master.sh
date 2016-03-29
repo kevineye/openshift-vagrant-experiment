@@ -11,15 +11,15 @@ su vagrant
 cd /home/vagrant
 git clone https://github.com/openshift/openshift-ansible
 
-ssh-keygen -f /home/vagrant/.ssh/id_rsa -N ''
-
-ssh-keyscan master.lan >> ~/.ssh/known_hosts
-sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub master.lan
-
-ssh-keyscan node1.lan >> ~/.ssh/known_hosts
-sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub node1.lan
-
-ssh-keyscan node2.lan >> ~/.ssh/known_hosts
-sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub node2.lan
+# ssh-keygen -f /home/vagrant/.ssh/id_rsa -N ''
+# 
+# ssh-keyscan master.lan >> /home/vagrant/.ssh/known_hosts
+# sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub master.lan
+# 
+# ssh-keyscan node1.lan >> /home/vagrant/.ssh/known_hosts
+# sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub node1.lan
+# 
+# ssh-keyscan node2.lan >> /home/vagrant/.ssh/known_hosts
+# sshpass -p vagrant ssh-copy-id -i /home/vagrant/.ssh/id_rsa.pub node2.lan
 
 # ansible-playbook /home/vagrant/openshift-ansible/playbooks/byo/config.yml
